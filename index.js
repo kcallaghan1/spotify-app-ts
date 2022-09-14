@@ -12,16 +12,7 @@ const FRONTEND_URI = process.env.FRONTEND_URI;
 const PORT = process.env.PORT || 8888;
 
 // Priorty serve any static files
-app.use(express.static(path.resolve(__dirname, './cline/build')));
-
-app.get('/', (req, res) => {
-    const data = {
-        name: 'Hello',
-        isAwesome: true
-    };
-
-    res.json(data);
-});
+app.use(express.static(path.resolve(__dirname, './client/build')));
 
 /**
  * Generates a random string containing numbers and letters
