@@ -27,7 +27,7 @@ const StyledLoginButton = styled.a`
 const LOGIN_URI =
 process.env.NODE_ENV !== 'production'
 ? 'http://localhost:8888/login'
-: 'https://young-citadel-27631.herokuapp.com/login';
+: 'https://kcallaghan-spotify-app.herokuapp.com/login';
 
 
 const Login = () => (
