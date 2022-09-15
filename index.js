@@ -12,7 +12,7 @@ const FRONTEND_URI = process.env.FRONTEND_URI;
 const PORT = process.env.PORT || 8888;
 
 // Priorty serve any static files
-app.use(express.static("client/build"));;
+app.use(express.static(path.resolve(__dirname, './client/build')));
 
 /**
  * Generates a random string containing numbers and letters
@@ -120,8 +120,8 @@ app.get('/refresh_token', (req, res) => {
 
 
 // All remaining requests return the React app, so it can handle routing
-app.get('*', function (req, res) {
-    res.sendFile('index.html');
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
   });
 
 app.listen(PORT, () => {
