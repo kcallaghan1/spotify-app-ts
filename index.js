@@ -120,9 +120,9 @@ app.get('/refresh_token', (req, res) => {
 
 
 // All remaining requests return the React app, so it can handle routing
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
-});
+app.get('*', function (req, res) {
+    res.sendFile('index.html');
+  });
 
 app.listen(PORT, () => {
     console.log(`Express app listening at http://localhost:${PORT}`);
