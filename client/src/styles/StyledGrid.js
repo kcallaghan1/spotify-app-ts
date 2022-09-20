@@ -17,11 +17,12 @@ const StyledGrid = styled.ul`
     background-color: var(--near-black);
     border-radius: var(--border-radius-subtle);
     transition: background-color 0.3s ease;
-    cursor: default;
+    cursor: pointer;
 
     &:hover,
     &:focus {
       background-color: var(--dark-grey);
+      text-decoration: none;
 
       img {
         box-shadow: 0 8px 24px rgb(0 0 0 / 50%);

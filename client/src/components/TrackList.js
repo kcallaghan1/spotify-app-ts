@@ -6,7 +6,7 @@ const TrackList = ({ tracks }) => (
     {tracks && tracks.length ? (
       <StyledTrackList>
         {tracks.map((track, i) => (
-          <li className="track__item" key={i}>
+          <a className="track__item" key={i}  href={track.external_urls.spotify}>
             <div className="track__item__num">{i + 1}</div>
             <div className="track__item__title-group">
               {track.album.images.length && track.album.images[2] && (
@@ -33,7 +33,7 @@ const TrackList = ({ tracks }) => (
             <div className="track__item__duration">
               {formatDuration(track.duration_ms)}
             </div>
-          </li>
+          </a>
         ))}
       </StyledTrackList>
     ) : (

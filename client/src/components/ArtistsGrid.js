@@ -5,7 +5,7 @@ const ArtistsGrid = ({ artists }) => (
         {artists && artists.length ? (
             <StyledGrid type="artist">
                 {artists.map((artist, i) => (
-                    <li className="grid__item" key={i}>
+                    <a className="grid__item" key={i} href={artist.external_urls.spotify}>
                         <div className="grid__item__inner">
                             {artist.images[0] && (
                                 <div className="grid__item__img">
@@ -15,7 +15,7 @@ const ArtistsGrid = ({ artists }) => (
                         </div>
                         <h3 className="grid__item__name__overflow-ellipsis">{artist.name}</h3>
                         <p className="grid__item__label">Artist</p>
-                    </li>
+                    </a>
                 ))}
             </StyledGrid>
         ) : (

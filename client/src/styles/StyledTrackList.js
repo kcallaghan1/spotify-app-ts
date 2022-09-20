@@ -15,7 +15,7 @@ const StyledTrackList = styled.ul`
     font-size: var(--fz-sm);
     border-radius: var(--border-radius-subtle);
     transition: background-color 0.3s ease;
-    cursor: default;
+    cursor: pointer;
 
     @media (min-width: 768px) {
       grid-template-columns: 20px 4fr 2fr minmax(60px, 1fr);
@@ -25,6 +25,7 @@ const StyledTrackList = styled.ul`
     &:hover,
     &:focus {
       background-color: var(--dark-grey);
+      text-decoration: none;
     }
   }
 
