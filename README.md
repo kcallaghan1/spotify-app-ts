@@ -53,7 +53,7 @@ Currently hosted at https://kcallaghan-spotify-app.herokuapp.com/
 5. Push to Heroku
 
     ```shell
-    git push heroku main\*
+    git push heroku main*
     ```
 
     \*Whatever default branch is named in the git project
