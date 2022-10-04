@@ -63,7 +63,7 @@ const refreshToken = async () => {
     const { data } = await axios.get(`/refresh_token?refresh_token=${LOCALSTORAGE_VALUES.refreshToken}`);
 
     // Update localStorage values
-    window.localStorage.setItem(LOCALSTORAGE_KEYS.accessToken, data.accessToken);
+    window.localStorage.setItem(LOCALSTORAGE_KEYS.accessToken, data.access_token);
     window.localStorage.setItem(LOCALSTORAGE_KEYS.timestamp, Date.now());
 
     // Reload the page for localStorage updates to be reflected
